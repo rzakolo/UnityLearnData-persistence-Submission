@@ -13,7 +13,7 @@ public class UIMenuHandler : MonoBehaviour
         Manager.Instance.Load();
         playerName = Manager.Instance.playerName;
         playerPoint = Manager.Instance.bestScore;
-        bestScoreText.text = $"Best Score: {playerName}: {playerPoint}";
+        bestScoreText.text = $"Best Score: {Manager.Instance.bestPlayerName}: {playerPoint}";
     }
 
     // Update is called once per frame

@@ -32,7 +32,7 @@ public class MainManager : MonoBehaviour
         int perLine = Mathf.FloorToInt(4.0f / step);
         playerName = Manager.Instance.playerName;
         bestScore = Manager.Instance.bestScore;
-        BestScoreText.text = $"Best Score: {playerName}: {bestScore}";
+        BestScoreText.text = $"Best Score: {Manager.Instance.bestPlayerName}: {bestScore}";
         int[] pointCountArray = new[] { 1, 1, 2, 2, 5, 5 };
         for (int i = 0; i < LineCount; ++i)
         {
@@ -88,7 +88,7 @@ public class MainManager : MonoBehaviour
         {
             bestScore = m_Points;
             Manager.Instance.bestScore = bestScore;
-            Manager.Instance.playerName = playerName;
+            Manager.Instance.bestPlayerName = playerName;
             Manager.Instance.Save();
         }
     }
